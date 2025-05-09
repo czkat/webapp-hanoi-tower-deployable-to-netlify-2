@@ -299,6 +299,12 @@ class Game {
                 
                 // Actually move the disk in the game state
                 this.moveDisk(from, to);
+
+
+                // Ensure all disks are visible after animation
+                document.querySelectorAll('.disk').forEach(disk => {
+                    disk.style.visibility = 'visible';
+                });
             }
         };
         
